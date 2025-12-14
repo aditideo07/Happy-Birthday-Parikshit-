@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Happy Birthday ❤️</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to bottom, #ffdde1, #ee9ca7);
+            overflow: hidden;
+        }
+
+        /* Floating Hearts */
+        .heart {
+            position: fixed;
+            bottom: -10px;
+            color: rgba(255, 105, 180, 0.6);
+            font-size: 20px;
+            animation: floatUp 8s linear infinite;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-120vh) scale(1.5);
+                opacity: 0;
+            }
+        }
+
+        /* Card */
+        .container {
+            position: relative;
+            z-index: 10;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.92);
+            padding: 30px;
+            max-width: 600px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            color: #b23a48;
+        }
+
+        h2 {
+            font-weight: normal;
+            margin-bottom: 20px;
+            color: #d16c7c;
+        }
+
+        .message {
+            text-align: left;
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 25px;
+            white-space: pre-line;
+            color: #4a2c2a;
+        }
+
+        audio {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .footer {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #888;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Hearts -->
+<script>
+    const heartCount = 30;
+
+    for (let i = 0; i < heartCount; i++) {
+        const heart = document.createElement("div");
+        heart.className = "heart";
+        heart.innerHTML = "❤";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.animationDuration = (5 + Math.random() * 5) + "s";
+        heart.style.fontSize = (14 + Math.random() * 20) + "px";
+        document.body.appendChild(heart);
+    }
+</script>
+
+<div class="container">
+    <div class="card">
+        <h1>Happy Birthday ❤️</h1>
+        <h2>To the one who means everything to me</h2>
+
+        <div class="message">
+Dear Love,
+
+Write your thoughts here...
+Your emotions, your memories,
+your love — all from your heart 💌
+
+Always yours,
+[Your Name]
+        </div>
+
+        <p><strong>This song is for you 🎶</strong></p>
+        <audio controls autoplay loop>
+            <source src="Raabta - Siyah Raatein - Lyrics With Sargam_ Arijit Singh _ Saif Ali Khan Kareena K _ Agent Vinod.mp3" type="audio/mpeg">
+        </audio>
+
+        <div class="footer">
+            Made with love 🤍
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
